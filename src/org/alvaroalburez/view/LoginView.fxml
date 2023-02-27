@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.alvaroalburez.controller.LoginController">
+   <children>
+      <Pane prefHeight="400.0" prefWidth="300.0" style="-fx-background-color: #F08837;">
+         <children>
+            <ImageView fitHeight="170.0" fitWidth="182.0" layoutX="68.0" layoutY="92.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/kinal%20Mall.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="300.0" prefHeight="400.0" prefWidth="300.0" style="-fx-background-color: #100D6F;">
+         <children>
+            <Pane layoutX="82.0" layoutY="135.0" prefHeight="27.0" prefWidth="149.0" style="-fx-background-color: #FFFFFF;">
+               <children>
+                  <TextField fx:id="txtUsuario" promptText="User Name" style="-fx-background-color: Transparent; -fx-border-color: #F08837; -fx-border-width: 0px 0px 2px 0px;" />
+               </children>
+            </Pane>
+            <ImageView fitHeight="83.0" fitWidth="62.0" layoutX="125.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Login.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="62.0" fitWidth="41.0" layoutX="27.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Usuarios.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="41.0" fitWidth="41.0" layoutX="34.0" layoutY="193.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Password.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnLogin" layoutX="110.0" layoutY="259.0" mnemonicParsing="false" onAction="#Login" prefHeight="25.0" prefWidth="80.0" styleClass="button1" stylesheets="@../resource/KinalMallCSS.css" text="Login" textFill="WHITE" />
+            <Hyperlink layoutX="110.0" layoutY="345.0" onMouseClicked="#ventanaUsuario" text="Registrese Aqui." textFill="#ff9900" />
+            <Pane layoutX="82.0" layoutY="200.0" prefHeight="27.0" prefWidth="149.0" style="-fx-background-color: #FFFFFF;">
+               <children>
+                  <TextField fx:id="txtPassword" promptText="Password" style="-fx-background-color: Transparent; -fx-border-color: #F08837; -fx-border-width: 0px 0px 2px 0px;" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

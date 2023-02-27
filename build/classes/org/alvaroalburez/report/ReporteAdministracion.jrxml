@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteAdministracion" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="27c868bd-5771-4fe0-8e24-011060beeaf6">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[call sp_ListarAdministraciones();]]>
+	</queryString>
+	<field name="codigoAdministracion" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="752" splitType="Stretch">
+			<image>
+				<reportElement x="-18" y="-18" width="608" height="770" uuid="bca8149d-55ab-4849-a21a-dd481dde8038"/>
+				<imageExpression><![CDATA["C:\\Users\\Ramiro Alburez\\OneDrive\\Documentos\\NetBeansProjects\\KinalMall2020013\\src\\org\\alvaroalburez\\images\\Plantilla.png"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="137" splitType="Stretch">
+			<staticText>
+				<reportElement x="174" y="52" width="215" height="85" uuid="9cb1ef40-1ad4-4581-ad2a-17316d7343ce"/>
+				<textElement textAlignment="Center">
+					<font size="32"/>
+				</textElement>
+				<text><![CDATA[Reporte Administracion]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="70" splitType="Stretch">
+			<image>
+				<reportElement x="389" y="-227" width="176" height="165" uuid="388dc8d1-b0ef-468d-807b-c7d19bfd24f6"/>
+				<imageExpression><![CDATA["C:\\Users\\Ramiro Alburez\\OneDrive\\Documentos\\NetBeansProjects\\KinalMall2020013\\src\\org\\alvaroalburez\\images\\Kinal Mall logo tranpsarente.pgn.png"]]></imageExpression>
+			</image>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="96" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement x="18" y="16" width="511" height="20" forecolor="#FF6600" backcolor="#FF9900" uuid="bc248f42-d9ec-45e7-87cb-d101a81cc46b"/>
+			</rectangle>
+			<textField>
+				<reportElement x="28" y="55" width="100" height="20" uuid="c3617b38-1c74-482f-9e31-1b73dfcb80a2"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigoAdministracion}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="28" y="16" width="160" height="20" uuid="1104e606-020d-41f6-a277-62b07f431fd7"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[codigoAdministracion]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="233" y="55" width="100" height="20" uuid="793227db-7c3d-42e0-9e99-95a22e0ed14f"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="233" y="16" width="100" height="20" uuid="1b91de79-1771-4ac7-97b4-5725fa462ecb"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[direccion]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="442" y="55" width="100" height="20" uuid="30968138-abcb-4ad8-ac8e-691f3f55c064"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{telefono}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="442" y="16" width="100" height="20" uuid="f1cee09a-a332-4623-81ee-e16d6a89c6a5"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[telefono]]></text>
+			</staticText>
+			<line>
+				<reportElement x="18" y="88" width="547" height="1" uuid="4fab8975-bf3d-42c6-8e8e-ab1e2bed2064"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+</jasperReport>
